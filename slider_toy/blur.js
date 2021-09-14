@@ -4,6 +4,6 @@ let output = document.getElementById("output");
 
 // only response to an input event
 mySlider.addEventListener("change", function () {
-  output.innerText = " CHANGE! " + mySlider.value;
+  output.innerText = "Blurness: " + mySlider.value;
   console.log(mySlider.value);
 });
