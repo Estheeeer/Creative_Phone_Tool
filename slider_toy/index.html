@@ -92,8 +92,13 @@
 						ctx.beginPath();
 						ctx.arc(dets[i][1], dets[i][0], dets[i][2]/2, 0, 2*Math.PI, false);
 						ctx.lineWidth = 3;
-						ctx.strokeStyle = 'red';
+						// ctx.strokeStyle = 'red';
+						ctx.strokeStyle = 'blue';
 						ctx.stroke();
+						ctx.globalAlpha = 0.2;
+						ctx.fillStyle = 'blue';
+						ctx.fill();
+
 						//
 						// find the eye pupils for each detected face
 						// starting regions for localization are initialized based on the face bounding box
