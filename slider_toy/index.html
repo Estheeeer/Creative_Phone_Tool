@@ -96,6 +96,17 @@
 						ctx.lineWidth = 3;
 						ctx.strokeStyle = 'blue';
 						ctx.stroke();
+
+						if (mySlider.value > 25) {
+							// ctx.fillStyle = 'blue';
+							blur(dets[i][1], dets[i][0], dets[i][2]/2);
+							// ctx.filter = 'blur(4px)'
+						} else {
+							// ctx.fillStyle = 'yellow';
+							// ctx.filter = 'blur(10px)'
+						}
+						// ctx.fill(circle);
+						// ctx.globalAlpha = 0.1;
 						
 						//
 						// find the eye pupils for each detected face
@@ -140,12 +151,17 @@
 		}
 	</script>
 	<body>
-		<div class="slidecontainer">
+
+		<div class="slidecontainer"><center>
 			<input id="mySlider" class="slider" type="range" min="0" max="50" step="1" />
 			<p id="output">Blurness: </p>
-		</div>
+		</div></center>
+
 		<p><center><input type="button" value="Start webcam feed" onclick="button_callback()"></center></p>
-		<p><center><canvas width=640 height=480></canvas></center></p>
+		<p><center><canvas id="topCanvas" width=640 height=480></canvas></center></p>
+		<p><center><canvas id="bottomCanvas" width=640 height=480></canvas></center></p>
+
+
 	</div>
 	</body>
 	<script src="../blur.js"></script>
