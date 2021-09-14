@@ -90,15 +90,15 @@
 						var r, c, s;
 						//
 						ctx.beginPath();
-						ctx.arc(dets[i][1], dets[i][0], dets[i][2]/2, 0, 2*Math.PI, false);
+						var circle = ctx.arc(dets[i][1], dets[i][0], dets[i][2]/2, 0, 2*Math.PI, false);
 						ctx.lineWidth = 3;
 						// ctx.strokeStyle = 'red';
 						ctx.strokeStyle = 'blue';
 						ctx.stroke();
 
 						// blur face
-
-						ctx.filter = 'blur(10px)'
+						circle.filter = "blur(16px)";
+						// ctx.filter = 'blur(10px)'
 						// ctx.globalAlpha = 0.2;
 						ctx.fillStyle = 'blue';
 						ctx.fill();
