@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="chrome=1">
-		<title>Using pico.js and lploc.js for real-time localization of eye pupils</title>
+		<title>face blurring</title>
 		<script src="camvas.js"></script>
 		<script src="../pico.js"></script>
 		<script src="../lploc.js"></script>
@@ -88,15 +88,14 @@
 					if(dets[i][3]>50.0)
 					{
 						var r, c, s;
-						//
-						ctx.filter = "blur(16px)";
+
 						ctx.beginPath();
 						ctx.arc(dets[i][1], dets[i][0], dets[i][2]/2, 0, 2*Math.PI, false);
 						ctx.lineWidth = 3;
 						// ctx.strokeStyle = 'red';
 						ctx.strokeStyle = 'blue';
 						ctx.stroke();
-
+						ctx.filter = "blur(6px)";
 						// blur face
 
 						// ctx.filter = 'blur(10px)'
@@ -147,7 +146,7 @@
 		}
 	</script>
 	<body>
-			<p><center><input id="mySlider" type="range" min="0" max="999999999" step="1" /></center></p>
+		<p><center><input id="mySlider" type="range" min="0" max="50" step="1" /></center></p>
 		<p><center><input type="button" value="Start webcam feed" onclick="button_callback()"></center></p>
 		<p><center><canvas width=640 height=480></canvas></center></p>
 	</div>
