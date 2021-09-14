@@ -15,16 +15,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 // the last time it was called.
 
 function camvas(ctx, callback) {
-  /* slider test */
-  // get reference
-  let mySlider = document.getElementById("mySlider");
-  let output = document.getElementById("output");
-
-  // only response to an input event
-  mySlider.addEventListener("change", function () {
-    output.innerText = "blurness is: " + mySlider.value;
-  });
-
   var self = this;
   this.ctx = ctx;
   this.callback = callback;
@@ -77,4 +67,14 @@ function camvas(ctx, callback) {
     };
     requestAnimationFrame(loop);
   };
+
+  /* slider test */
+  // get reference
+  let mySlider = document.getElementById("mySlider");
+  let output = document.getElementById("output");
+
+  // only response to an input event
+  mySlider.addEventListener("change", function () {
+    output.innerText = " " + mySlider.value;
+  });
 }
