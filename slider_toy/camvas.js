@@ -14,8 +14,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 // `drawFunc` receives two parameters, the video and the time since
 // the last time it was called.
 
-import "./style.css";
-
 function camvas(ctx, callback) {
   var self = this;
   this.ctx = ctx;
