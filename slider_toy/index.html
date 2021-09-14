@@ -48,6 +48,9 @@
 				(3) get the drawing context on the canvas and define a function to transform an RGBA image to grayscale
 			*/
 			var ctx = document.getElementsByTagName('canvas')[0].getContext('2d');
+			// var c = document.getElementById("bottomCanvas");
+			// var ctx = c.getContext("2d");
+
 			function rgba_to_grayscale(rgba, nrows, ncols) {
 				var gray = new Uint8Array(nrows*ncols);
 				for(var r=0; r<nrows; ++r)
@@ -98,8 +101,8 @@
 						ctx.stroke();
 
 						if (mySlider.value > 25) {
-							// ctx.fillStyle = 'blue';
-							blur(dets[i][1], dets[i][0], dets[i][2]/2);
+							ctx.fillStyle = 'blue';
+							// blur(dets[i][1], dets[i][0], dets[i][2]/2);
 							// ctx.filter = 'blur(4px)'
 						} else {
 							// ctx.fillStyle = 'yellow';
@@ -158,7 +161,7 @@
 		</div></center>
 
 		<p><center><input type="button" value="Start webcam feed" onclick="button_callback()"></center></p>
-		<p><center><canvas id="topCanvas" width=640 height=480></canvas></center></p>
+		<!-- <p><center><canvas id="topCanvas" width=640 height=480></canvas></center></p> -->
 		<p><center><canvas id="bottomCanvas" width=640 height=480></canvas></center></p>
 
 
