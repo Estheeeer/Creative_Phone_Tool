@@ -1,1 +1,1 @@
-week 1 slider
+week 1 slider toy
