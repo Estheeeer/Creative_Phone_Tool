@@ -143,12 +143,16 @@
 				(6) it seems that everything went well
 			*/
 			initialized = true;
+			console.log(mySlider.value);
 		}
 	</script>
 	<body>
-		<p><center><input id="mySlider" type="range" min="0" max="50" step="1" /></center></p>
-		
-		<p><center><input id="output"></cwenter> </p>
+
+		<div class="slidecontainer">
+				<input type="range" min="1" max="100" value="50" class="slider" id="mySlider">
+				<p>Value: <span id="demo"></span></p>
+		</div>
+
 		<p><center><input type="button" value="Start webcam feed" onclick="button_callback()"></center></p>
 		<p><center><canvas width=640 height=480></canvas></center></p>
 	</div>

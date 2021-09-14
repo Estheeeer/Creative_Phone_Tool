@@ -14,19 +14,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 // `drawFunc` receives two parameters, the video and the time since
 // the last time it was called.
 
-/* slider test */
-
-// get reference
-let mySlider = document.getElementById("mySlider");
-let output = document.getElementById("output");
-
-// only response to an input event
-mySlider.addEventListener("change", function () {
-  output.innerText = "number is: " + mySlider.value;
-  console.log(mySlider.value);
-});
-
 function camvas(ctx, callback) {
+  /* slider test */
+  // get reference
+  let mySlider = document.getElementById("mySlider");
+  let output = document.getElementById("output");
+
+  // only response to an input event
+  mySlider.addEventListener("change", function () {
+    output.innerText = "blurness is: " + mySlider.value;
+  });
+
   var self = this;
   this.ctx = ctx;
   this.callback = callback;
