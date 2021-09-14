@@ -22,16 +22,9 @@ let output = document.getElementById("output");
 
 // only response to an input event
 mySlider.addEventListener("change", function () {
-  output.innerHTML = mySlider.value;
+  output.innerText = "number is: " + mySlider.value;
   console.log(mySlider.value);
 });
-
-// Update the current slider value (each time you drag the slider handle)
-mySlider.oninput = function () {
-  output.innerHTML = this.value;
-};
-
-output.innerHTML = slider.value; // Display the default slider value
 
 function camvas(ctx, callback) {
   var self = this;
