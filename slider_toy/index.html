@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="chrome=1">
-		<title>face blurring</title>
+		<title>Using pico.js and lploc.js for real-time localization of eye pupils</title>
 		<script src="camvas.js"></script>
 		<script src="../pico.js"></script>
 		<script src="../lploc.js"></script>
@@ -88,21 +88,12 @@
 					if(dets[i][3]>50.0)
 					{
 						var r, c, s;
-
+						//
 						ctx.beginPath();
 						ctx.arc(dets[i][1], dets[i][0], dets[i][2]/2, 0, 2*Math.PI, false);
 						ctx.lineWidth = 3;
-						// ctx.strokeStyle = 'red';
-						ctx.strokeStyle = 'blue';
+						ctx.strokeStyle = 'red';
 						ctx.stroke();
-						ctx.filter = "blur(6px)";
-						// blur face
-
-						// ctx.filter = 'blur(10px)'
-						// ctx.globalAlpha = 0.2;
-						// ctx.fillStyle = 'blue';
-						// ctx.fill();
-
 						//
 						// find the eye pupils for each detected face
 						// starting regions for localization are initialized based on the face bounding box
@@ -143,16 +134,13 @@
 				(6) it seems that everything went well
 			*/
 			initialized = true;
-			console.log(mySlider.value);
 		}
 	</script>
 	<body>
-
 		<div class="slidecontainer">
-				<input type="range" min="1" max="100" value="50" class="slider" id="mySlider">
-				<p id="output">blurrness: </p>
+			<input id="mySlider" class="slider" type="range" min="0" max="50" step="1" />
+			<p id="output">Blurness: </p>
 		</div>
-
 		<p><center><input type="button" value="Start webcam feed" onclick="button_callback()"></center></p>
 		<p><center><canvas width=640 height=480></canvas></center></p>
 	</div>
