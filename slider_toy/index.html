@@ -95,7 +95,11 @@
 						// ctx.strokeStyle = 'red';
 						ctx.strokeStyle = 'blue';
 						ctx.stroke();
-						ctx.globalAlpha = 0.2;
+
+						// blur face
+
+						ctx.filter = 'blur(10px)'
+						// ctx.globalAlpha = 0.2;
 						ctx.fillStyle = 'blue';
 						ctx.fill();
 
