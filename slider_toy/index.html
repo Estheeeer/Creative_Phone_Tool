@@ -8,21 +8,11 @@
 		<script src="camvas.js"></script>
 		<script src="../pico.js"></script>
 		<script src="../lploc.js"></script>
+		<script src="../blur.js"></script>
+
 		<!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
 	</head>
 	<script>
-
-		// get reference
-		let mySlider = document.getElementById("mySlider");
-		let output = document.getElementById("output");
-
-		// only response to an input event
-		mySlider.addEventListener("change", function () {
-			output.innerText = " CHANGE! " + mySlider.value;
-			console.log(mySlider.value);
-		});
-
-
 		var initialized = false;
 		function button_callback() {
 			/*
