@@ -96,19 +96,22 @@
 
 						ctx.beginPath();
 						ctx.arc(dets[i][1], dets[i][0], dets[i][2]/2, 0, 2*Math.PI, false);
+
 						ctx.lineWidth = 3;
 						ctx.strokeStyle = 'blue';
 						ctx.stroke();
 
-						if (mySlider.value > 25) {
-							ctx.fillStyle = 'blue';
-							// blur(dets[i][1], dets[i][0], dets[i][2]/2);
-							// ctx.filter = 'blur(4px)'
-						} else {
-							// ctx.fillStyle = 'yellow';
-							// ctx.filter = 'blur(10px)'
-						}
-						// ctx.fill(circle);
+						var circle = document.createElement("div"); 
+						circle.setAttribute("id", "circle");
+						document.body.appendChild(circle);
+						
+						// ctx.fillStyle = 'yellow';
+						// ctx.fill();
+
+						// circle.filter = 'blur(4px)';
+						// var temp  ='blur(' + mySlide.value + 'px)';
+						// ctx.filter = 'blur(' + mySlide.value + 'px)';
+
 						// ctx.globalAlpha = 0.1;
 						
 						//
@@ -156,7 +159,7 @@
 	<body>
 
 		<div class="slidecontainer"><center>
-			<input id="mySlider" class="slider" type="range" min="0" max="50" step="1" />
+			<input id="mySlider" class="slider" type="range" min="0" max="30" step="1" />
 			<p id="output">Blurness: </p>
 		</div></center>
 

@@ -41,3 +41,7 @@
 #myCanvas {
   backdrop-filter: blur(2px);
 }
+
+#circle {
+  filter: "blur(4px)";
+}
