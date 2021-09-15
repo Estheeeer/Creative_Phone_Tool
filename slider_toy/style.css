@@ -45,6 +45,7 @@
 /* #circle {
   filter: "blur(4px)";
 } */
+
 #circle {
   width: 100px;
   height: 100px;
@@ -53,4 +54,5 @@
   left: 150px;
   top: 150px;
   backdrop-filter: blur(10px);
+  color: yellow;
 }
