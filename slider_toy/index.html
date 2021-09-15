@@ -94,16 +94,19 @@
 					{
 						var r, c, s;
 
-						ctx.beginPath();
-						ctx.arc(dets[i][1], dets[i][0], dets[i][2]/2, 0, 2*Math.PI, false);
+						// ctx.beginPath();
+						// ctx.arc(dets[i][1], dets[i][0], dets[i][2]/2, 0, 2*Math.PI, false);
 
-						ctx.lineWidth = 3;
-						ctx.strokeStyle = 'blue';
-						ctx.stroke();
+						// ctx.lineWidth = 3;
+						// ctx.strokeStyle = 'blue';
+						// ctx.stroke();
 
-						var circle = document.createElement("div"); 
-						circle.setAttribute("id", "circle");
-						document.body.appendChild(circle);
+						var circle = document.getElementById("circle"); 
+ 						circle.style = `left: ${dets[i][1]}px; top: ${dets[i][0]}px;`;
+
+						// var circle = document.createElement("div"); 
+						// circle.setAttribute("id", "circle");
+						// document.body.appendChild(circle);
 
 						// ctx.fillStyle = 'yellow';
 						// ctx.fill();
@@ -162,7 +165,7 @@
 			<input id="mySlider" class="slider" type="range" min="0" max="30" step="1" />
 			<p id="output">Blurness: </p>
 		</div></center>
-
+		<div id="circle"></div>
 		<p><center><input type="button" value="Start webcam feed" onclick="button_callback()"></center></p>
 		<!-- <p><center><canvas id="topCanvas" width=640 height=480></canvas></center></p> -->
 		<p><center><canvas id="bottomCanvas" width=640 height=480></canvas></center></p>
