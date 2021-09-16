@@ -102,9 +102,16 @@
 						ctx.stroke();
 
 						var circle = document.getElementById("circle"); 
-						circle.style = `left: ${dets[i][1]}px; top: ${dets[i][0]}px;`;
-						circle.style = `width:${dets[i][2]}px; height:${dets[i][2]}px;`;
+						// circle.style = 'object-position: ${640+dets[i][1]}px ${dets[i][0]}px;';
+						// circle.style = `left: ${dets[i][1]}px; top: ${dets[i][0]}px;width:${dets[i][2]}px; height:${dets[i][2]}px;`;
+						circle.style.left = dets[i][1] + 'px'; 
+						circle.style.top = dets[i][0] + 'px'; 
+						circle.style.height = dets[i][2] + 'px';
+						circle.style.width = dets[i][2] + 'px';
+
 						
+
+
 						// var circle = document.createElement("div"); 
 						// circle.setAttribute("id", "circle");
 						// document.body.appendChild(circle);
@@ -169,10 +176,15 @@
 
 		<p><center><input type="button" value="Start webcam feed" onclick="button_callback()"></center></p>
 		
+		
+		<!-- <p><center><canvas id="myCanvas" width=50% height=50%></canvas></center>
+		<div id="circle"></div>
+		</p> -->
 
-		<p><center><canvas id="myCanvas" width=640 height=480></canvas></center></p>
-		<center><div id="circle"></div></center>
-
+		<div id="container">
+			<p><center><canvas id="myCanvas" width=640 height=480></canvas></center></p>
+			<div id="circle"></div>
+		</div>
 		<!-- <canvas id="myCanvas" width=640 height=480></canvas> -->
 
 

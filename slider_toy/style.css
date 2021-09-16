@@ -42,13 +42,26 @@
   filter: "blur(4px)";
 } */
 
+/* #myCanvas {
+  position: relative;
+} */
+
+#container {
+  position: relative;
+}
+#container p,
 #circle {
+  position: absolute;
+}
+
+#circle {
+  /* vertical-align: middle; */
   width: 100px;
   height: 100px;
   border-radius: 100%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  /* backdrop-filter: blur(10px); */
-  background-color: lightblue;
+  /* position: absolute; */
+  /* left: 150px;
+  top: 150px; */
+  backdrop-filter: blur(10px);
+  /* background-color: lightblue; */
 }
