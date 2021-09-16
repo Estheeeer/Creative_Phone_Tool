@@ -66,6 +66,7 @@
 #container {
   position: relative;
 }
+
 #container p,
 #circle {
   position: absolute;
