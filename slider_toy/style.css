@@ -56,12 +56,12 @@
 
 #circle {
   /* vertical-align: middle; */
-  width: 100px;
-  height: 100px;
+  /* width: 100px;
+  height: 100px; */
   border-radius: 100%;
   /* position: absolute; */
   /* left: 150px;
   top: 150px; */
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(4px);
   /* background-color: lightblue; */
 }
