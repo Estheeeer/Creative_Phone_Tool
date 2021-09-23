@@ -1,3 +1,82 @@
-h1 {
+body {
   font-family: "Saira Condensed", sans-serif;
+}
+
+body {
+  margin: auto;
+  font-family: sans-serif;
+  background: blanchedalmond;
+  max-width: 400px;
+
+  height: 100vh;
+  height: -webkit-fill-available;
+  height: fill-available;
+
+  position: relative;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+html {
+  height: -webkit-fill-available;
+  height: fill-available;
+}
+
+#iconbox {
+  margin: 20px;
+  width: calc(100% - 40px);
+
+  height: calc(2 * (min(100vw, 400px) - 40px));
+  /* ^^^^^
+  ^ This complicated line is a way to make sure the height is twice the width, 
+  so the grid areas are square: 
+      min(100vw, 400px)        <- width of the body
+      min(100vw, 400px) - 40px <- width of the iconbox
+  2 * min(100vw, 400px) - 40px <- double the width of the icon box
+  */
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-gap: 10px;
+}
+
+.large {
+  display: block;
+  grid-column-start: span 2;
+  grid-row-start: span 2;
+}
+
+button {
+  background-color: hsl(260, 50%, 60%);
+
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  display: block;
+  border-radius: 10px;
+}
+
+/*ripple effect */
+button {
+  background-position: center;
+  transition: background 0.8s transform 0.1s;
+}
+button:hover {
+  background: hsl(260, 50%, 65%);
+}
+button:active {
+  background-color: hsl(260, 50%, 70%);
+  background-size: 100%;
+  transition: background 0s transform 0.1s;
+  transform: scale(1.025);
+}
+
+iframe {
+  display: none;
 }
