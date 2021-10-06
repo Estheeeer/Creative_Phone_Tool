@@ -1,4 +1,5 @@
-h2 {
-  font-family: "Zoombieland-YzEGO";
-  src: url("Zoombieland-YzEGO.ttf") format("truetype");
+.zoombieland_font {
+  /* font-family: "Zoombieland-YzEGO"; */
+  src: url("../src/Zoombieland-YzEGO.ttf") format("truetype");
+  color: blue;
 }
