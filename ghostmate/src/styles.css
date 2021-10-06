@@ -3,7 +3,15 @@
   src: url("../src/Zoombieland-YzEGO.ttf");
 }
 
-h1 {
+.header img {
+  float: left;
+  width: 10px;
+  height: auto;
+  background: #555;
+}
+
+.header h1 {
+  position: relative;
   font-family: Zoombieland;
   src: url("../src/Zoombieland-YzEGO.ttf") format("truetype");
   /* font-size: 50px; */
