@@ -1,6 +1,5 @@
 .zoombieland_font {
   /* font-family: "Zoombieland-YzEGO"; */
   src: url("../src/Zoombieland-YzEGO.ttf") format("truetype");
-  font-size: 20 px;
   color: blue;
 }
