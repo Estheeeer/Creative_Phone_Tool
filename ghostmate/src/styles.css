@@ -1,7 +1,12 @@
-.zoombieland_font {
-  /* font-family: "Zoombieland-YzEGO"; */
+@font-face {
+  font-family: "Zoombieland";
+  src: url("../src/Zoombieland-YzEGO.ttf");
+}
+
+h2 {
+  font-family: Zoombieland;
   src: url("../src/Zoombieland-YzEGO.ttf") format("truetype");
-  color: blue;
+  color: rgba(98, 0, 255, 0.7);
 }
 
 #myCanvas1 {
