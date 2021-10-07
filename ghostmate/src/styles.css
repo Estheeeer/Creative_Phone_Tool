@@ -17,7 +17,7 @@ h1 {
   float: left, bottom;
   font-family: Zoombieland;
   src: url("../src/Zoombieland-YzEGO.ttf") format("truetype");
-  /* width: 30%; */
+  color: #4728f7;
 }
 
 #myCanvas1 {
