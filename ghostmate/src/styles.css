@@ -3,18 +3,21 @@
   src: url("../src/Zoombieland-YzEGO.ttf");
 }
 
-.header img {
-  float: left;
-  width: 10px;
-  height: auto;
-  background: #555;
+#header {
+  overflow: auto;
 }
 
-.header h1 {
-  position: relative;
+#logo {
+  float: left;
+  /* background: #111; */
+  width: 30%;
+}
+
+h1 {
+  float: left, bottom;
   font-family: Zoombieland;
   src: url("../src/Zoombieland-YzEGO.ttf") format("truetype");
-  /* font-size: 50px; */
+  /* width: 30%; */
 }
 
 #myCanvas1 {
