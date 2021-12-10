@@ -240,7 +240,7 @@ visibility: visible;
 
 .text1, .text2, .text3 {
   background-color: #59a0f1;
-  color: white;
+  /*color: white;*/
   font-size: 12px;
   padding: 5px 5px;
 }
